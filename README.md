@@ -10,6 +10,7 @@ docker-compose run web django-admin.py startproject composeexample .
 
 Change database connection from sqlite to postgres updating the following in ```composeexample/settings.py``` file
 
+```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -19,6 +20,7 @@ DATABASES = {
         'PORT': 5432,
     }
 }
+```
 
 Run the ```docker-compose up``` command from the top level directory for your project.
 
