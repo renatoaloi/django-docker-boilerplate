@@ -36,6 +36,14 @@ docker-machine ip default
 
 And navigate to the IP address discovered above, for instance: ```http://192.168.99.101:8000```
 
+### Access PostgreSQL Database
+
+To access the database run the following command:
+
+```
+docker run -it --rm --link esdjango_db_1:db --net esdjango_default postgres psql -h db -U postgres
+```
+
 ### Notes
 
 In certain platforms (Windows 10) you might need to edit ```ALLOWED_HOSTS``` inside ```settings.py```. In development enviroment you can set the value to:
